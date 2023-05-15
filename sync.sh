@@ -1,7 +1,7 @@
 #!/bin/bash
 
 hub="registry.cn-hangzhou.aliyuncs.com"
-repo="$hub/chenby"
+repo="$hub/waluna"
 
 if [ -f sync.yaml ]; then
    echo "[Start] sync......."
