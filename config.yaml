@@ -60,6 +60,7 @@ images:
     - kube-controller-manager
     - coredns/coredns
     - ingress-nginx/controller
+    - ingress-nginx/opentelemetry
     - ingress-nginx/controller-chroot
     - ingress-nginx/kube-webhook-certgen
     - cpa/cluster-proportional-autoscaler
