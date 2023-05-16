@@ -16,7 +16,7 @@ https://github.com/Xan-Yum/sync_images
 
 # 目前有如下镜像仓库，后续会陆续增加
 
-```
+```yaml
   docker.elastic.co:
     - elasticsearch/elasticsearch
     - kibana/kibana
@@ -93,16 +93,16 @@ https://github.com/Xan-Yum/sync_images
 
 # 使用方式
 
-```
-docker.elastic.co/kibana/{image_name}  ==>  registry.cn-qingdao.aliyuncs.com/waluna/{image_name}
-quay.io/csiaddons/{image_name}  ==>  registry.cn-qingdao.aliyuncs.com/waluna/{image_name}
-k8s.gcr.io/{image_name}  ==>  registry.cn-qingdao.aliyuncs.com/waluna/{image_name}
+```bash
+docker.elastic.co/kibana/{image_name}  ==>  registry.cn-hangzhou.aliyuncs.com/waluna/{image_name}
+quay.io/csiaddons/{image_name}  ==>  registry.cn-hangzhou.aliyuncs.com/waluna/{image_name}
+k8s.gcr.io/{image_name}  ==>  registry.cn-hangzhou.aliyuncs.com/waluna/{image_name}
 ....
 ```
 
 # 拉去镜像
-```
-docker pull registry.cn-qingdao.aliyuncs.com/waluna/kube-scheduler:[镜像版本号]
+```bash
+docker pull registry.cn-hangzhou.aliyuncs.com/waluna/kube-scheduler:[镜像版本号]
 ```
 
 # 声明
