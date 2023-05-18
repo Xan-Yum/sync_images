@@ -38,6 +38,9 @@ images:
     - cilium/startup-script
     - cilium/clustermesh-apiserver
     - coreos/etcd
+    - metallb/controller
+    - metallb/speaker
+    - frrouting/frr
   k8s.gcr.io:
     - dns/k8s-dns-node-cache
     - metrics-server/metrics-server
