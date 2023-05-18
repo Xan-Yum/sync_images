@@ -69,6 +69,7 @@ images:
   gcr.io:
     - kaniko-project/executor
     - google-samples/xtrabackup
+    - kubebuilder/kube-rbac-proxy
   docker.io:
     - calico/node
     - calico/typha
