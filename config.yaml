@@ -77,5 +77,6 @@ images:
     - calico/typha
     - calico/cni
     - calico/node
+    - kubesphere/openelb
     - calico/kube-controllers
     - calico/pod2daemon-flexvol
