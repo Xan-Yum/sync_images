@@ -40,6 +40,19 @@ images:
     - coreos/etcd
     - metallb/speaker
     - frrouting/frr
+    - goharbor/nginx-photon
+    - goharbor/harbor-portal
+    - goharbor/harbor-core
+    - goharbor/harbor-jobservice
+    - goharbor/registry-photon
+    - goharbor/harbor-registryctl
+    - goharbor/chartmuseum-photon
+    - goharbor/trivy-adapter-photon
+    - goharbor/notary-server-photon
+    - goharbor/notary-signer-photon
+    - goharbor/harbor-db
+    - goharbor/redis-photon
+    - goharbor/harbor-exporter
   k8s.gcr.io:
     - dns/k8s-dns-node-cache
     - metrics-server/metrics-server
