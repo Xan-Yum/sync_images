@@ -65,6 +65,8 @@ images:
     - sig-storage/csi-snapshotter
     - sig-storage/csi-attacher
     - sig-storage/nfsplugin
+    - sig-storage/livenessprobe
+    - sig-storage/snapshot-controller
   registry.k8s.io:
     - pause
     - etcd
