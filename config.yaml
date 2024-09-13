@@ -96,3 +96,4 @@ images:
     - calico/pod2daemon-flexvol
     - kubesphere/openelb
     - aledbf/kube-keepalived-vip
+    - flannel/flannel
