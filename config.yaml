@@ -97,3 +97,4 @@ images:
     - kubesphere/openelb
     - aledbf/kube-keepalived-vip
     - flannel/flannel
+    - flannel/flannel-cni-plugin
