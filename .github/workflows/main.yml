@@ -11,7 +11,7 @@ on:
 jobs:
   sync-aliyun:
 
-    runs-on: xUbuntu_22.04
+    runs-on: ubuntu-22.04
     strategy:
       max-parallel: 4
       matrix:
