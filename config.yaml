@@ -25,6 +25,7 @@ images:
     - prometheus/node-exporter
     - prometheus-operator/prometheus-config-reloader
     - prometheus-operator/prometheus-operator
+    - prometheus-operator/admission-webhook
     - brancz/kube-rbac-proxy
     - cilium/cilium
     - cilium/operator-generic
@@ -75,6 +76,7 @@ images:
     - kube-apiserver
     - kube-scheduler
     - kube-controller-manager
+    - kubectl
     - coredns/coredns
     - ingress-nginx/controller
     - ingress-nginx/opentelemetry
