@@ -3,6 +3,7 @@ import re
 import yaml
 import requests
 from distutils.version import LooseVersion
+from packaging import version
 
 # 基本配置
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -226,7 +227,18 @@ def get_repo_elastic_tags(image, limit=5):
             continue
         tags_data.append(tag)
 
-    tags_sort_data = sorted(tags_data, key=LooseVersion, reverse=True)
+    # 调试：检查哪些 tag 会导致排序失败
+    for tag in tags_data:
+        try:
+            LooseVersion(tag)
+        except Exception as e:
+            print(f"问题 tag: {tag}, 错误: {e}")
+    
+    # tags_sort_data = sorted(tags_data, key=LooseVersion, reverse=True)
+    try:
+        tags_sort_data = sorted(tags_data, key=lambda v: version.parse(v), reverse=True)
+    except Exception:
+        tags_sort_data = sorted(tags_data, reverse=True)
 
     # limit tag
     tags_limit_data = tags_sort_data[:limit]
@@ -272,8 +284,23 @@ def get_docker_io_tags(image, limit=5):
 
         tags_data.append(name)
 
-    tags_sort_data = sorted(tags_data, key=LooseVersion, reverse=True)
+    # 调试：检查哪些 tag 会导致排序失败
+    for tag in tags_data:
+        try:
+            LooseVersion(tag)
+        except Exception as e:
+            print(f"问题 tag: {tag}, 错误: {e}")
 
+    # tags_sort_data = sorted(tags_data, key=LooseVersion, reverse=True)
+    
+    # 使用 packaging.version 进行排序，更健壮
+    try:
+        tags_sort_data = sorted(tags_data, key=lambda v: version.parse(v), reverse=True)
+    except Exception:
+        # 降级方案：按字符串排序
+        print(f'[WARN] 版本排序失败，使用字符串排序，tags_data: {tags_data}')
+        tags_sort_data = sorted(tags_data, reverse=True)
+        
     # limit tag
     tags_limit_data = tags_sort_data[:limit]
 
